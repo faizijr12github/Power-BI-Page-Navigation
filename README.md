@@ -1,146 +1,180 @@
-📊 Power BI Page Navigation UI/UX (Bookmarks & Selection Pane)
+# Power BI Page Navigation UI/UX — Bookmarks & Selection Pane
 
-📖 Overview
+> *Transforming a static Power BI dashboard into a dynamic, app-like experience with a slide-out navigation panel.*
 
-This project demonstrates a modern and interactive Page Navigation system in Power BI using Bookmarks and Selection Pane.
+---
 
-The goal was to enhance user experience by creating a dynamic slide-out navigation panel, similar to modern web applications, while maximizing dashboard space for data visualization.
+## Overview
 
-🎯 Objectives
+This project demonstrates a **modern and interactive Page Navigation system** in Power BI, built using **Bookmarks** and the **Selection Pane**.
 
-Create a dynamic navigation experience in Power BI
+The goal was to enhance user experience by creating a **dynamic slide-out navigation panel** — similar to modern web applications — while maximizing the dashboard canvas space available for data visualization.
 
-Optimize report canvas space
+---
 
-Implement modern UI/UX design patterns
+## Objectives
 
-Use Bookmarks & Selection Pane effectively
+-  Create a **dynamic navigation experience** inside Power BI
+-  **Optimize report canvas space** by hiding navigation when not needed
+-  Implement **modern UI/UX design patterns** within BI constraints
+-  Master the use of **Bookmarks & Selection Pane** for interactive state control
 
-🛠️ Tools & Technologies
+---
 
-Power BI
+##  Tools & Technologies
 
-Bookmarks
+| Tool / Feature | Purpose |
+|---|---|
+| **Power BI Desktop** | Report development and design |
+| **Bookmarks** | Capturing and switching between UI states |
+| **Selection Pane** | Managing element visibility and layer order |
+| **Action Buttons** | Triggering bookmark state changes on click |
 
-Selection Pane
+---
 
-Action Buttons
+##  Key Features
 
-🚀 Key Features
-🔹 1. Dynamic Page Navigation
+###  1. Dynamic Slide-Out Navigation Panel
+A custom side panel slides in and out on demand, providing access to:
 
-Created a slide-out side panel for navigation
+| Page | Description |
+|---|---|
+|  Summary Page | High-level KPI overview |
+|  Customer Detail Page | Customer-level breakdown |
+|  Product Detail Page | Product performance analysis |
 
-Includes:
+Navigation is triggered via a **hamburger menu icon** — a familiar, intuitive interaction pattern borrowed from modern web design.
 
-Summary Page
+>  Provides a centralized navigation hub without cluttering the report canvas.
 
-Customer Detail Page
+---
 
-Product Detail Page
+###  2. Canvas Space Optimization
+- Navigation panel is **hidden by default**
+- Full canvas width is available for visuals when navigation is closed
+- Particularly effective for layouts that require:
+  - Large, detailed tables
+  - Wide, complex charts
 
-Uses a hamburger menu icon for intuitive interaction
+>  Ensures a focus-driven, distraction-free data analysis experience.
 
-➡️ Provides a centralized navigation hub without cluttering the report
+---
 
-🔹 2. Canvas Space Optimization
+###  3. Technical Implementation
 
-Navigation panel remains hidden by default
+####  Bookmark States
 
-Allows maximum space for visuals
+| State | Behavior |
+|---|---|
+| **Panel Open** | Navigation panel is visible |
+| **Panel Closed** | Navigation panel is hidden |
 
-Ideal for:
+####  How It Works
 
-Large tables
+```
+Selection Pane      →   Controls element visibility and layer order
+        ↓
+Bookmarks           →   Capture the visible/hidden state of each element
+        ↓
+Action Buttons      →   Trigger bookmark transitions on user click
+        ↓
+Result              →   Smooth toggle effect, identical to web app behavior
+```
 
-Detailed charts
+>  No custom visuals or external tools needed — built entirely with native Power BI features.
 
-➡️ Ensures focus-driven data analysis
+---
 
-🔹 3. Technical Implementation
-📌 Bookmark States
+###  4. Seamless One-Click Interaction
+- **Single click** on the hamburger icon toggles the panel open or closed
+- **Instant page switching** without relying on default Power BI tab navigation
+- Zero learning curve for end users
 
-Panel Open → Navigation visible
+>  Delivers a professional, app-like experience inside a BI report.
 
-Panel Closed → Navigation hidden
+---
 
-⚙️ How It Works
+###  5. Visual Design Language
 
-Used Selection Pane to control visibility of elements
+| Design Element | Choice |
+|---|---|
+| **Layout** | Clean and minimal — data stays front and center |
+| **Side Panel** | Subtle grey background for clear separation |
+| **Visuals** | Rounded corners for a modern, soft aesthetic |
+| **Active Page Indicator** | Purple/blue highlight to show current location |
+| **Style Inspiration** | Glassmorphism — frosted, layered UI aesthetics |
 
-Created Bookmarks for each state
+>  Inspired by modern UI/UX trends while staying within Power BI's native capabilities.
 
-Linked bookmarks with Action Buttons
+---
 
-➡️ Creates a smooth toggle effect similar to web applications
+## 💡 Benefits
 
-🔹 4. Seamless User Interaction
+| Benefit | Description |
+|---|---|
+|  **Improved Usability** | Users navigate intuitively without training |
+|  **Easy Page Access** | All pages reachable from one consistent location |
+|  **Better Screen Real Estate** | Canvas fully utilized for data when nav is hidden |
+|  **Faster Experience** | Instant transitions with no page reload |
+|  **Data-First Focus** | Navigation stays out of the way until needed |
 
-One-click toggle using hamburger menu
+---
 
-Instant page switching
+##  Key Learnings
 
-No reliance on default Power BI tabs
+- Advanced use of **Bookmarks** to manage UI state in Power BI
+- Managing element **layers and visibility** using the Selection Pane
+- Designing **interactive, app-like dashboards** within native Power BI features
+- Applying **UI/UX principles** (hierarchy, focus, familiarity) to BI report design
 
-➡️ Delivers a professional, app-like experience
+---
 
-🎨 5. Visual Design
-
-Clean and minimal layout
-
-Subtle grey side panel
-
-Rounded corners on visuals
-
-Active page highlighted (purple/blue state)
-
-➡️ Inspired by modern UI trends (Glassmorphism style)
-
-💡 Benefits
-
-📈 Improved report usability
-
-🧭 Easy navigation across pages
-
-🖥️ Better use of screen real estate
-
-⚡ Faster and smoother user experience
-
-🎯 Keeps focus on data, not navigation
-
-🧠 Key Learnings
-
-Advanced use of Bookmarks in Power BI
-
-Managing layers using Selection Pane
-
-Designing interactive dashboards
-
-Applying UI/UX principles in BI reports
-
-📂 Use Case
+##  Use Cases
 
 This technique is ideal for:
 
-Interactive dashboards
+-  **Interactive dashboards** with multiple sections or pages
+-  **Executive-level reports** requiring a polished, professional feel
+-  Reports with **3+ pages** that need intuitive navigation
+-  Any scenario where **maximizing canvas space** is a priority
 
-Executive-level reports
+---
 
-Reports with multiple pages
+##  Outcome
 
-Improving user experience in Power BI
+-  Built a **modern, slide-out navigation system** using only native Power BI features
+-  Delivered a **clean, interactive, and user-friendly** reporting experience
+-  Transformed a static dashboard into a **dynamic BI application**
 
-💡 Outcome
+---
 
-Built a modern navigation system inside Power BI
+##  Screenshots
 
-Delivered a clean, interactive, and user-friendly report
+### Navigation Panel — Open State
+![Navigation Panel Open](https://github.com/user-attachments/assets/3ababc59-d1e1-4376-ab64-351585c601d7)
 
-Transformed a static dashboard into a dynamic BI application
+*The slide-out panel reveals page links with the active page highlighted — triggered by the hamburger menu.*
 
-📷 Project Screenshots
-<img width="1102" height="617" alt="Screenshot 2026-03-17 230241" src="https://github.com/user-attachments/assets/3ababc59-d1e1-4376-ab64-351585c601d7" />
+---
 
-<img width="1093" height="613" alt="Screenshot 2026-03-17 230003" src="https://github.com/user-attachments/assets/7753b546-4fd9-46f9-9a7e-1942325576ff" />
+### Navigation Panel — Closed State
+![Navigation Panel Closed](https://github.com/user-attachments/assets/7753b546-4fd9-46f9-9a7e-1942325576ff)
 
+*Panel hidden — the full canvas is reclaimed for data visualization.*
 
+---
+
+##  Project Structure
+
+```
+ powerbi-navigation-ux
+ ┣  PowerBI_Navigation_UX.pbix        # Main Power BI report file
+ ┣  screenshots/                       # Open and closed state previews
+ ┗  README.md                          # Project documentation
+```
+
+---
+
+##  Connect
+
+If you found this project useful or have suggestions, feel free to open an **Issue** or submit a **Pull Request**.
