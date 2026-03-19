@@ -108,7 +108,7 @@ Result              →   Smooth toggle effect, identical to web app behavior
 
 ---
 
-## 💡 Benefits
+## Benefits
 
 | Benefit | Description |
 |---|---|
